@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="General" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_hidden_files"
+            android:summaryOff="off"
+            android:summaryOn="on"
+            android:title="Test" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Configs" >
+        <Preference
+            android:key="import"
+            android:title="Import" />
+        <Preference
+            android:key="export"
+            android:title="Export" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

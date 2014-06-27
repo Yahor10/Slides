@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.slideshow.MainActivity" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_dropbox_sync"
+        android:icon="@drawable/ic_dropbox"
+        android:orderInCategory="100"
+        android:title="Find images in dropbox"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_add_slideshow"
+        android:icon="@drawable/ic_add_slideshow"
+        android:orderInCategory="100"
+        android:title="Add new slide show"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_startstop"
+        android:icon="@drawable/ic_play"
+        android:orderInCategory="100"
+        android:title="Start slide show"
+        app:showAsAction="always"/>
+
+</menu>

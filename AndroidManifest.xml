@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest android:versionCode="1" android:versionName="1.0"
+    package="com.example.slideshow" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" android:theme="@style/AppTheme">
+        <activity android:label="@string/app_name" android:name="com.example.slideshow.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- created by User at 2014-06-24 09:15:10 -->
+        <activity android:name=".DirectoryActivity"/>
+        <activity android:name="SelectImageActivity"/>
+        <activity android:name="com.example.slideshow.SlidePreferenceActivity"/><activity android:name="DropboxImagesActivity"></activity>
+        <activity android:name="com.dropbox.sync.android.DbxAuthActivity" /><activity android:launchMode="singleTask" android:name="com.dropbox.client2.android.AuthActivity">
+            <intent-filter>
+                <data android:scheme="db-k7nownkcqpeez9b" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity><receiver android:name=".receiver.BootReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver><receiver android:name=".receiver.AlarmManagerBroadcastReceiver"></receiver>
+        
+        
+        <service android:enabled="true" android:exported="false"
+            android:label="Dropbox Sync" android:name="com.dropbox.sync.android.DbxSyncService"/>
+        
+        
+    </application>
+</manifest>
